@@ -1,0 +1,27 @@
+{
+   // See https://code.visualstudio.com/docs/editor/tasks for more information
+   "version": "2.0.0",
+   "tasks": [
+      {
+         "label": "pixel-script-build",
+         "type": "shell",
+         "command": "bun build ./pixel-script/dpixel.ts --outdir ./pixel-script"
+      },
+      {
+         "label": "db-reset-dev",
+         "type": "shell",
+         "command": "bash ./bash/db-reset-dev.sh"
+      },
+      {
+         "label": "server-dev",
+         "type": "shell",
+         "command": "bunx wrangler dev",
+         "dependsOn": ["db-reset-dev"]
+      },
+      {
+         "label": "server-deploy",
+         "type": "shell",
+         "command": "bunx wrangler deploy"
+      }
+   ]
+}

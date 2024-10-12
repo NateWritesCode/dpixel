@@ -1,0 +1,9 @@
+{
+   "recommendations": [
+      "tamasfe.even-better-toml",
+      "biomejs.biome",
+      "alexcvzz.vscode-sqlite",
+      "thebearingedge.vscode-sql-lit",
+      "ms-vscode.live-server"
+   ]
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello World</title>
+</head>
+
+<body>
+    <script>
+        !function (f, d, p, x, i, e, l) {
+            if (f.DPixel) return;
+            i = f.DPixel = function () {
+                i.callMethod ?
+                    i.callMethod.apply(i, arguments) : i.queue.push(arguments)
+            };
+            if (!f._dpixel) f._dpixel = i; i.push = i; i.loaded = !0; i.version = '1.0';
+            i.queue = []; e = d.createElement(p); e.async = !0;
+            // e.src = './dpixel.js';
+            e.src = 'https://cdn.jsdelivr.net/gh/NateWritesCode/dpixel@master/pixel-script/dpixel.js';
+            l = d.getElementsByTagName(p)[0]; l.parentNode.insertBefore(e, l)
+        }(window, document, 'script');
+
+        DPixel('trackEvent');
+
+    </script>
+
+    <h1>Hello World</h1>
+</body>
+
+</html>
